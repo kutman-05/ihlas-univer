@@ -1,0 +1,517 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #111;
+    color: #eee;
+  }
+  
+  .main-page {
+    padding: 0;
+    background-color: #111;
+    color: #eee;
+    text-align: center;
+    justify-content: center;
+  }
+  .hero-section {
+    position: relative;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    z-index: 1;
+  
+    height: 100vh; /* <-- Бул маанилүү! */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    background-image: url('https://img.freepik.com/free-photo/student-posing-group-study-session-with-colleagues_23-2149211072.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  /* Караңгылатуу үчүн overlay */
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.612);
+    z-index: 0;
+  }
+
+  .hero-section * {
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (max-width: 768px) {
+    .hero-section {
+      height: 70vh; /* Телефондо кичирээк болсун */
+      padding: 2rem 1rem;
+      background-position: top;
+    }
+  
+    .hero-section h1 {
+      font-size: 1.4rem;
+    }
+  
+    .hero-section p {
+      font-size: 1rem;
+    }
+  }
+  
+
+  
+  
+  
+
+
+
+  .hero-section *:not(.hero-img) {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero-img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    filter: brightness(65%);
+    margin-top: 1rem;
+  }
+  
+  
+
+  
+  
+  /* .info-section {
+    padding: 3rem 2rem;
+    background-color: #1b1b1b;
+  } */
+  
+  .why-us-section {
+    background-color: #0f0f0f;
+    padding: 40px 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  .why-us-section h2 {
+    color: #f7c843;
+    font-size: 28px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #444;
+    display: inline-block;
+    padding-bottom: 10px;
+    cursor: default;
+  }
+  
+  .why-us-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .why-us-card {
+    background-color: #1a1a1a;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .why-us-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .why-us-card img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 16px;
+    margin-left: -12pc;
+    border-radius: 100%;
+  }
+  
+  .why-us-card h3 {
+    color: #f7c843;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .why-us-card p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+
+
+
+  /* .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #181818;
+  }
+  
+  .image-gallery img {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+  } */
+  .image-gallery-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+    justify-content: center;
+    overflow: hidden;
+    
+  }
+  
+    /* .image-gallery-wrapper.centered .image-gallery {
+        justify-content: center; 
+    } */
+  
+  .image-gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  
+  .image-gallery::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .image-gallery img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+  
+  .slider-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+  }
+  
+  .slider-btn.left {
+    margin-right: 10px;
+  }
+  
+  .slider-btn.right {
+    margin-left: 10px;
+  }
+  
+  .slider-btn.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  
+
+
+
+  
+  
+
+
+
+
+
+  .footer {
+    padding: 2rem;
+    background-color: #0d0d0d;
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
+  }
+  
+  @media (max-width: 768px) {
+    .image-gallery {
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero-section h1 {
+      font-size: 1.5rem;
+    }
+    .hero-section p {
+      font-size: 1rem;
+    }
+  }
+/* 
+  .......dsfsldfsl...................................... */
+  .whatsapp-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    background-color: #540c75;
+    border: 2px solid #46d4ff;
+    border-radius: 20%;
+    box-shadow: 0 4px 6px rgba(245, 37, 48, 0.939);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+    cursor: pointer;
+
+  }
+  
+  .whatsapp-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  .whatsapp-link:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 20%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  /* .whatsapp-link {
+    background-color: #d529f0;
+    border: 2px solid #01acfc;
+  } */
+  
+  .instagram-link {
+    background-color: #0a0a0a;
+    border: 2px solid #f7f7f7;
+  }
+  
+  .icon-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 12px rgba(242, 255, 0, 0.4);
+  }
+  
+  .icon-link:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgb(208, 254, 2);
+  }
+
+ /* footer footer footer */
+ .footer-icons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #111;
+    border: 2px solid #ffcc00;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .footer-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 10px #ffcc00;
+  }
+  
+  .footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer a:hover {
+    color: #ffcc00; /* же өзүң каалаган түс */
+    text-decoration: underline;
+  }
+
+  /* язык тил боюнча */
+.lang-switcher select {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 4px 9px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.lang-switcher select option {
+  background-color: #002855;
+  color: white;
+}
+
+
+.page{
+  display: block;
+  align-items: center;
+  margin-top: 2pc;
+  margin-left: 2pc;
+}
+/* UNIVERSITY///UNIVERSITY//UNIVERSITY//UNIVERSITY//UNIVERSITY// */
+.page1 {
+  padding: 40px;
+  background: linear-gradient(to bottom, #0d0d0d, #074775);
+  color: #fff;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #00d9ff;
+}
+
+.university-list {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: auto;
+}
+
+.university-item {
+  margin: 15px 0;
+  border-radius: 15px;
+  overflow: hidden;
+  background-size: 100% 100%;
+ 
+  background-position: center;
+  height: 120px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.university-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(9, 197, 75, 0.5);
+}
+
+.university-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 35px;
+  backdrop-filter: blur(2px);
+  transition: background 0.3s;
+}
+
+.university-link:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+
+/* FACT/////FACT////FACT..FACT FACT FACT FACT FACT FACT FACT FACT */
+
+/* Жалпы бет стили */
+.page2 {
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: #111; /* Кара фон */
+  font-family: 'Segoe UI', sans-serif;
+  color: #e0e0e0; /* Жарык текст */
+}
+
+/* Башкы аталыш */
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+/* Кириш сөз */
+.intro {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #bbbbbb;
+}
+
+/* Университет тизмеси */
+.university-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* Карточка стили */
+.card {
+  background: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ховер эффекти */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Университет аталышы */
+.card h2 {
+  color: #90caf9;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Текст стили */
+.card p {
+  font-size: 1rem;
+  margin: 0.4rem 0;
+  line-height: 1.6;
+  color: #d0d0d0;
+}
+
+/* Эң майда элементтер үчүн */
+strong {
+  color: #ffcc80;
+}
