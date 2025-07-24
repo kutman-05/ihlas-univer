@@ -1,5 +1,6 @@
+// App.js
 import "./App.css";
-import Header from "./components/header"; // "Header" чоң тамга менен
+import Header from "./components/header";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
@@ -9,6 +10,7 @@ import { LanguageProvider } from "./context/LanguageContext";
 import University from "./pages/University/university";
 import Student from "./pages/University/student";
 import Fact from "./pages/University/fact";
+
 function App() {
   return (
     <div className="App">

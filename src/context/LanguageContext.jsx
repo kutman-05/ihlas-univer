@@ -1,6 +1,3 @@
-// ✅ 3. Header.js ичинде ТИЛ ТАНДОО жана КОНТЕКСТ САКТОО (ТИЛ)
-// 🗂 src/context/LanguageContext.js
-
 import { createContext, useContext, useState } from "react";
 
 const LanguageContext = createContext();
@@ -16,5 +13,3 @@ export const LanguageProvider = ({ children }) => {
 };
 
 export const useLanguage = () => useContext(LanguageContext);
-
-

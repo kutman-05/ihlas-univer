@@ -56,26 +56,16 @@ const Home = () => {
     <section className="main-page">
       <div className="hero-section">
         <h1>
-          <TranslatedText
-            text="Мамлекеттик университеттерде окуу мүмкүнчүлүгү"
-            lang={lang}
-          />
+          <TranslatedText id="state_university_opportunity" />
         </h1>
-        <p> 
-          <TranslatedText
-            text="Биз Түркияда билим алууну каалаган чет элдик студенттер үчүн бардык процессти камтыган пакеттик кызматты сунуштайбыз."
-            lang={lang}
-          />
+        <p>
+          <TranslatedText id="package_service_foreign_students" />
         </p>
-       
       </div>
 
       <div className="why-us-section">
         <h2>
-          <TranslatedText
-            text="Эмне үчүн дал ушул бизди тандашат?"
-            lang={lang}
-          />
+          <TranslatedText id="why_choose_us" />
         </h2>
         <div className="why-us-cards">
           <div className="why-us-card">
@@ -84,16 +74,10 @@ const Home = () => {
               alt="Иконка путешествия"
             />
             <h3>
-              <TranslatedText
-                text="📘 Билим — келечектин негизги ачкычы"
-                lang={lang}
-              />
+              <TranslatedText id="education_key" />
             </h3>
             <p>
-              <TranslatedText
-                text="Кыргызстандын мыкты университеттери аркылуу дүйнөлүк деңгээлдеги билимге жол ачыңыз. Илимге сугарылган чөйрөдө өз келечегиңизди калыптандырыңыз."
-                lang={lang}
-              />
+              <TranslatedText id="best_universities_message" />
             </p>
           </div>
 
@@ -103,13 +87,10 @@ const Home = () => {
               alt="Иконка качества"
             />
             <h3>
-              <TranslatedText text="🎓 Сапат — ар бир кадамда" lang={lang} />
+              <TranslatedText id="quality_every_step" />
             </h3>
             <p>
-              <TranslatedText
-                text="Аккредитациядан өткөн программалар, жогорку квалификациялуу окутуучулар жана заманбап технологиялар — ийгиликтүү студенттик жашоонун кепилдиги."
-                lang={lang}
-              />
+              <TranslatedText id="accredited_programs_message" />
             </p>
           </div>
 
@@ -119,16 +100,10 @@ const Home = () => {
               alt="Иконка поддержки"
             />
             <h3>
-              <TranslatedText
-                text="🤝 Камкордук — ар бир студентке"
-                lang={lang}
-              />
+              <TranslatedText id="care_every_student" />
             </h3>
             <p>
-              <TranslatedText
-                text="Сиздин мүмкүнчүлүгүңүзгө, максатыңызга жана тилегиңизге ылайык көрсөтүлгөн жекече жардам жана багыт берүү."
-                lang={lang}
-              />
+              <TranslatedText id="individual_help_message" />
             </p>
           </div>
 
@@ -138,16 +113,10 @@ const Home = () => {
               alt="Иконка доступности"
             />
             <h3>
-              <TranslatedText
-                text="💡 Мүмкүнчүлүктөр — баарына жеткиликтүү"
-                lang={lang}
-              />
+              <TranslatedText id="opportunities_available" />
             </h3>
             <p>
-              <TranslatedText
-                text="Стипендиялар жана программалар аркылуу сапаттуу билим ар бир каалоочуга жеткиликтүү."
-                lang={lang}
-              />
+              <TranslatedText id="scholarships_available_message" />
             </p>
           </div>
         </div>
@@ -164,66 +133,28 @@ const Home = () => {
           </button>
         )}
         <div className="image-gallery" ref={galleryRef}>
-          <iframe
-            width="300"
-            height="200"
-            src="https://www.youtube.com/embed/8tddEMkVNzI"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-
-          <iframe
-            width="300"
-            height="200"
-            src="https://www.youtube.com/embed/Bn_Ulk7MOzk"
-            title="Student Campus"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-
-          <iframe
-            width="300"
-            height="200"
-            src="https://www.youtube.com/embed/8tce5TqnDgU"
-            title="Group Study"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-          <iframe
-            width="300"
-            height="200"
-            src="https://www.youtube.com/embed/8tddEMkVNzI"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-
-          <iframe
-            width="300"
-            height="200"
-            src="https://www.youtube.com/embed/Bn_Ulk7MOzk"
-            title="Student Campus"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-
-          <iframe
-            width="300"
-            height="200"
-            src="https://www.youtube.com/embed/8tce5TqnDgU"
-            title="Group Study"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+          {[
+            "8tddEMkVNzI",
+            "Bn_Ulk7MOzk",
+            "8tce5TqnDgU",
+            "TwQUdbw4__4",
+            "8tddEMkVNzI",
+            "Bn_Ulk7MOzk",
+            "8tce5TqnDgU",
+            "TwQUdbw4__4",
+          ].map((id) => (
+            <iframe
+              key={id}
+              width="300"
+              height="200"
+              src={`https://www.youtube.com/embed/${id}`}
+              title="YouTube video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          ))}
         </div>
-
         {!hideArrows && (
           <button
             className={`slider-btn right ${atEnd ? "disabled" : ""}`}

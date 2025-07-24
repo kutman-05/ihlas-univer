@@ -515,3 +515,172 @@ body {
 strong {
   color: #ffcc80;
 }
+
+
+
+
+
+
+
+/* Student баракчасы үчүн стилдер */
+/* Фонду кара кылып, арткы сүрөттү коюу */
+.page.student-page {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  font-family: Arial, sans-serif;
+  color: #f0f0f0; /* Жарык текст */
+  background-color: #121212; /* Тунук кара фон */
+  overflow: hidden;
+  min-height: 100vh;
+}
+.student-photo {
+  width: 100%; /* Экранын туурасына толугу менен жайгашат */
+  max-width: 400px; /* Максималдуу туурасы */
+  height: auto; /* Пропорция сакталат */
+  display: block; /* Төмөнкү элементтер менен туура иштешет */
+  margin: 0 auto; /* Орто жайгаштыруу */
+  border-radius: 12px; /* Бурчтарын жумшартсаң болот */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Көлеңкө (кааласаң) */
+}
+
+/* Арткы сүрөттү жайгаштыруу (экрандын артында) */
+.page.student-page::before {
+  content: "";
+  position: fixed; /* Фон ар дайым экранда болот */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("https://i.postimg.cc/2S9W5rLt/student-photo.jpg") no-repeat center center;
+  background-size: cover;
+  filter: brightness(0.15); /* Арткы сүрөттү караңгылатуу (текст жакшы көрүнөт) */
+  z-index: -1; /* Тексттердин артына */
+}
+
+/* Сүрөттү баракчадагы өзүнчө элемент катары колдонбош үчүн жокко чыгаруу */
+.student-intro {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 20px;
+  /* Эгер сүрөт керек болсо, аны төмөнкүдөй орнотууга болот */
+  /* бирок сен сүрөттү фон катары гана колдонуп жатканың үчүн сүрөттүн тагыраак көрсөтүлүшүн алдын ала тандап коюу керек */
+}
+
+/* Эгерде сүрөт керек болсо баракчадагы сүрөттү көрүнүп турушу үчүн */
+/*
+.student-photo {
+  display: none;  // Фон катары сүрөттүн бар болгону жетет
+}
+*/
+
+/* Тексттерди жарык кылуу */
+h1, h2, p {
+  color: #f0f0f0; /* Жарык ак түс */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Жумшак контраст түзөт */
+}
+
+/* Социалдык иконалар жарык жана hover эффект */
+.social-icon {
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #66aaff;
+}
+
+/* Баракчанын ички текстин жарык кылуу */
+.student-info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #eee;
+  text-shadow: 0 0 5px rgba(0,0,0,0.7);
+}
+
+/* Башкы аталыш */
+.page.student-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Байланыш бөлүмү */
+.student-contact {
+  margin-top: 40px;
+}
+
+/* Байланыш аталышы */
+.student-contact h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #f0f0f0;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Социалдык иконалардын кнопкалары */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+
+/* ..лдоываоды */
+.top-students-section {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.top-students-section h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+
+.top-students-list {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.8;
+  color: #ddd;
+  font-size: 1rem;
+}
+
+.top-students-list li {
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px rgba(0,0,0,0.6);
+}
+
+
+.top-students-list li {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  line-height: 1.6;
+}
+
+.top-students-list a {
+  display: inline-block;
+  margin-top: 6px;
+  color: #4eaaff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.top-students-list a:hover {
+  color: #aaccff;
+}
+

@@ -1,10 +1,11 @@
+// Header.jsx
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { SlArrowDown } from "react-icons/sl";
 import "./header.css";
 import { useLanguage } from "../context/LanguageContext";
-
-
+import translations from "../utils/translations.json";
+import TranslatedText from "./TranslatedText";
 
 const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -12,12 +13,11 @@ const Header = () => {
   const location = useLocation();
   const { lang, setLang } = useLanguage();
 
-
-  const handleLangChange = (e) => {
-    setLang(e.target.value);
+  const t = (key) => {
+    return translations[key] && translations[key][lang]
+      ? translations[key][lang]
+      : key;
   };
-  // Тил тандоо үчүн стейт (азыр эч кандай логика жок, жөн гана тандоону сактайт)
-  // const [lang, setLang] = useState("ru");
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -37,12 +37,6 @@ const Header = () => {
     setActiveDropdown((prev) => (prev === name ? null : name));
   };
 
-  // Тил тандоодо өзгөрүүнү кармоо
-  // const handleLangChange = (e) => {
-  //   setLang(e.target.value);
-  //   // Кийин бул жерде котормочу API чакырыла турган болушу мүмкүн
-  // };
-
   return (
     <header className="header">
       <nav className="nav" ref={dropdownRef}>
@@ -55,23 +49,23 @@ const Header = () => {
               className="dropdown-btn"
               onClick={() => toggleDropdown("services")}
             >
-              Биздин шарттар <SlArrowDown />
+              {t("our_services")} <SlArrowDown />
             </button>
             {activeDropdown === "services" && (
               <ul className="dropdown-menu">
                 <li>
                   <Link to="/services/umrah">
-                    💼 Биз сунуштаган билим багыттары
+                    💼 {t("Биз сунуштаган билим багыттары")}
                   </Link>
                 </li>
                 <li>
                   <Link to="/services/hajj">
-                    📌 Сиз үчүн даярдалган мүмкүнчүлүктөр
+                    📌 {t("Сиз үчүн даярдалган мүмкүнчүлүктөр")}
                   </Link>
                 </li>
                 <li>
                   <Link to="/services/group-tours">
-                    🎓 Окуу боюнча негизги кызматтарыбыз
+                    🎓 {t("Окуу боюнча негизги кызматтарыбыз")}
                   </Link>
                 </li>
               </ul>
@@ -82,19 +76,21 @@ const Header = () => {
               className="dropdown-btn"
               onClick={() => toggleDropdown("about")}
             >
-              Биз жөнүндө <SlArrowDown />
+              {t("Биз жөнүндө")} <SlArrowDown />
             </button>
             {activeDropdown === "about" && (
               <ul className="dropdown-menu">
                 <li>
-                  <Link to="/about">📖 Биздин тарыхыбыз</Link>
+                  <Link to="/about">📖 {t("Биздин тарыхыбыз")}</Link>
                 </li>
                 <li>
-                  <Link to="/about/team">👩‍🏫 Окутуучулар жана команда</Link>
+                  <Link to="/about/team">
+                    👩‍🏫 {t("Окутуучулар жана команда")}
+                  </Link>
                 </li>
                 <li>
                   <Link to="/about/partners">
-                    🤝 Өнөктөштөр жана кызматташтык
+                    🤝 {t("Өнөктөштөр жана кызматташтык")}
                   </Link>
                 </li>
               </ul>
@@ -105,19 +101,18 @@ const Header = () => {
               className="dropdown-btn"
               onClick={() => toggleDropdown("university")}
             >
-              Университет
-              <SlArrowDown />
+              {t("Университет")} <SlArrowDown />
             </button>
             {activeDropdown === "university" && (
               <ul className="dropdown-menu">
                 <li>
-                  <Link to="/fact">Кызыктуу фактылар</Link>
+                  <Link to="/fact">{t("Кызыктуу фактылар")}</Link>
                 </li>
                 <li>
-                  <Link to="/university">Университеттер</Link>
+                  <Link to="/university">{t("Университеттер")}</Link>
                 </li>
                 <li>
-                  <Link to="/student">Студенттер</Link>
+                  <Link to="/student">{t("Студенттер")}</Link>
                 </li>
               </ul>
             )}
@@ -126,18 +121,16 @@ const Header = () => {
             className="contact-lang-wrapper"
             style={{ display: "flex", alignItems: "center", gap: "10px" }}
           >
-            <Link to="/contact">Контакты</Link>
-
-            {/* Тил тандоочу select */}
+            <Link to="/contact">
+              <TranslatedText id="contact" />
+            </Link>
+            <div className="lang-switcher">
+              <select value={lang} onChange={(e) => setLang(e.target.value)}>
+                <option value="ky">Кыргызча</option>
+                <option value="ru">Русский</option>
+              </select>
+            </div>
           </li>
-          <div className="lang-switcher">
-            <select value={lang} onChange={handleLangChange}>
-              <option value="ky">Кыргызча</option>
-              <option value="ru">Русский</option>
-              <option value="en">English</option>
-              <option value="tr">Türkçe</option>
-            </select>
-          </div>
         </ul>
       </nav>
     </header>
