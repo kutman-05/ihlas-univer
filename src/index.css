@@ -46,6 +46,7 @@ body {
   .hero-section * {
     position: relative;
     z-index: 1;
+    font-size: 1.3pc;
   }
 
   @media (max-width: 768px) {
@@ -233,20 +234,7 @@ body {
 
 
   
-  
-
-
-
-
-
-  .footer {
-    padding: 2rem;
-    background-color: #0d0d0d;
-    font-size: 0.9rem;
-    border-top: 1px solid #333;
-  }
-  
-  @media (max-width: 768px) {
+    @media (max-width: 768px) {
     .image-gallery {
       flex-direction: column;
       align-items: center;
@@ -258,6 +246,28 @@ body {
       font-size: 1rem;
     }
   }
+
+
+
+
+
+ .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  background-color: #111;
+  font-size: 0.9rem;
+  border-top: 3px solid #333;
+  box-shadow: 0 0 15px #00aaff;
+}
+ .footer h1{
+  color: #ffcc00;
+ }
+  
+
 /* 
   .......dsfsldfsl...................................... */
   .whatsapp-link {
@@ -273,7 +283,6 @@ body {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     text-decoration: none;
     cursor: pointer;
-
   }
   
   .whatsapp-link:hover {
@@ -300,10 +309,7 @@ body {
     margin: 0 5px;
   }
   
-  /* .whatsapp-link {
-    background-color: #d529f0;
-    border: 2px solid #01acfc;
-  } */
+ 
   
   .instagram-link {
     background-color: #0a0a0a;
@@ -342,8 +348,11 @@ body {
     justify-content: center;
     transition: transform 0.2s ease, box-shadow 0.3s ease;
     text-decoration: none;
+    margin-top: -4pc;
   }
-  
+  .pochta{
+    margin-top: -4pc;
+  }
   .footer-icon:hover {
     transform: translateY(-3px);
     box-shadow: 0 0 10px #ffcc00;
@@ -359,6 +368,83 @@ body {
     color: #ffcc00; /* же өзүң каалаган түс */
     text-decoration: underline;
   }
+
+  .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 150px;
+  text-align: center;
+  color: #e0d5d5;
+  font-size: 0.9rem;
+  margin-left: 9pc;
+  line-height: 2pc;
+}
+.footer-right p{
+  margin-left: -13pc;
+  font-size: 1pc;
+  margin-top: -4pc;
+}
+.footer-right .footer-button {
+  background-color: #ffcc00;
+  color: #111;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  
+}
+
+.footer-right .footer-button:hover {
+  background-color: #ffaa00;
+  transform: scale(1.05);
+}
+
+.footer-right .footer-button:active {
+  transform: scale(0.97);
+}
+
+.footer-input {
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 200px;
+  display: block;
+}
+
+.footer-button {
+  padding: 10px 20px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 8px;
+  background-color: #25D366;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  display: block;
+}
+
+.footer-button:hover {
+  background-color: #128C7E;
+}
+
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
   /* язык тил боюнча */
 .lang-switcher select {
@@ -386,7 +472,7 @@ body {
 /* UNIVERSITY///UNIVERSITY//UNIVERSITY//UNIVERSITY//UNIVERSITY// */
 .page1 {
   padding: 40px;
-  background: linear-gradient(to bottom, #0d0d0d, #074775);
+  background: linear-gradient(to bottom, #0d0d0d, #051c2d);
   color: #fff;
   min-height: 100vh;
   font-family: 'Segoe UI', sans-serif;
@@ -427,10 +513,10 @@ body {
 
 .university-link {
   display: block;
-  width: 100%;
+  width: 100%;  
   height: 100%;
   color: white;
-  background: rgba(0, 0, 0, 0.5);
+ background: linear-gradient(to bottom, #0c2b91, #111112);
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
   text-decoration: none;
   font-size: 24px;
@@ -442,7 +528,7 @@ body {
 }
 
 .university-link:hover {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(6, 242, 246, 0.7);
 }
 
 
@@ -523,164 +609,288 @@ strong {
 
 
 /* Student баракчасы үчүн стилдер */
-/* Фонду кара кылып, арткы сүрөттү коюу */
 .page.student-page {
-  position: relative;
   max-width: 900px;
   margin: 0 auto;
-  padding: 30px 20px;
-  font-family: Arial, sans-serif;
-  color: #f0f0f0; /* Жарык текст */
-  background-color: #121212; /* Тунук кара фон */
-  overflow: hidden;
-  min-height: 100vh;
-}
-.student-photo {
-  width: 100%; /* Экранын туурасына толугу менен жайгашат */
-  max-width: 400px; /* Максималдуу туурасы */
-  height: auto; /* Пропорция сакталат */
-  display: block; /* Төмөнкү элементтер менен туура иштешет */
-  margin: 0 auto; /* Орто жайгаштыруу */
-  border-radius: 12px; /* Бурчтарын жумшартсаң болот */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Көлеңкө (кааласаң) */
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #eee; /* Ачык текст кара фонго */
+  background-color: #000; /* Кара арткы фон */
+  border-radius: 10px;
 }
 
-/* Арткы сүрөттү жайгаштыруу (экрандын артында) */
-.page.student-page::before {
-  content: "";
-  position: fixed; /* Фон ар дайым экранда болот */
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: url("https://i.postimg.cc/2S9W5rLt/student-photo.jpg") no-repeat center center;
-  background-size: cover;
-  filter: brightness(0.15); /* Арткы сүрөттү караңгылатуу (текст жакшы көрүнөт) */
-  z-index: -1; /* Тексттердин артына */
+.page.student-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #f0f0f0;
+  font-weight: 700;
 }
 
-/* Сүрөттү баракчадагы өзүнчө элемент катары колдонбош үчүн жокко чыгаруу */
-.student-intro {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  margin-top: 20px;
-  /* Эгер сүрөт керек болсо, аны төмөнкүдөй орнотууга болот */
-  /* бирок сен сүрөттү фон катары гана колдонуп жатканың үчүн сүрөттүн тагыраак көрсөтүлүшүн алдын ала тандап коюу керек */
+.top-students-section {
+  background-color: #111; /* Кара фонго жакын */
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00aaff; /* Жеңил көк жаркыраган көлөкө */
+  margin-bottom: 40px;
 }
 
-/* Эгерде сүрөт керек болсо баракчадагы сүрөттү көрүнүп турушу үчүн */
-/*
-.student-photo {
-  display: none;  // Фон катары сүрөттүн бар болгону жетет
-}
-*/
-
-/* Тексттерди жарык кылуу */
-h1, h2, p {
-  color: #f0f0f0; /* Жарык ак түс */
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Жумшак контраст түзөт */
+.top-students-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00aaff; /* Жашыл-көк түстө */
+  border-bottom: 3px solid #00aaff;
+  padding-bottom: 8px;
+  font-weight: 600;
 }
 
-/* Социалдык иконалар жарык жана hover эффект */
-.social-icon {
+.top-students-list {
+  list-style-type: none;
+  padding-left: 0;
+  line-height: 1.6;
+}
+
+.top-students-list li {
+  margin-bottom: 18px;
+  font-size: 1.1rem;
   color: #ccc;
+}
+
+.top-students-list li strong {
+  color: #00ccff;
+  font-weight: 700;
+}
+
+.top-students-list li a {
+  display: inline-block;
+  margin-top: 6px;
+  color: #00aaff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.top-students-list li a:hover {
+  color: #0099dd;
+  text-decoration: underline;
+}
+
+.student-contact {
+  background-color: #111;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00aaff;
+  text-align: center;
+}
+
+.student-contact h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #00aaff;
+  font-weight: 600;
+}
+
+.student-contact p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.social-icon {
+  color: #00aaff;
   transition: color 0.3s ease;
 }
 
 .social-icon:hover {
-  color: #66aaff;
+  color: #0099dd;
+  cursor: pointer;
 }
 
-/* Баракчанын ички текстин жарык кылуу */
-.student-info p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 15px;
-  color: #eee;
-  text-shadow: 0 0 5px rgba(0,0,0,0.7);
+/* Университеттке даярдоо  Баракчасы*/
+
+.university-prep {
+  background-color: #111; /* Кара фондо */
+  color: #fff; /* Негизги текст ак */
+  padding: 40px 20px;
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
 }
 
-/* Башкы аталыш */
-.page.student-page h1 {
-  font-size: 2.5rem;
+
+.hero-section2 {
+  background-image: url('https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2017/08/Stanford.jpg?w=1024&h=682');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  padding: 80px 20px;
+  margin-top: -5pc;
+  width: 100%;
+  margin-left: -2pc;
+  z-index: 1;
+  text-align: center;
+}
+
+/* Бул overlay сүрөттүн үстүнө жеңил кара фон берет */
+.hero-section2::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.445); /* 50% кара тунук overlay */
+  z-index: 2;
+}
+
+/* Текст өзүнчө кабатта көрүнүшү үчүн */
+.hero-section2 h1,
+.hero-section2 h2 {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-section2 h1 {
+  font-size: 3rem;
   margin-bottom: 20px;
-  font-weight: 700;
-  text-align: center;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
-/* Байланыш бөлүмү */
-.student-contact {
-  margin-top: 40px;
-}
-
-/* Байланыш аталышы */
-.student-contact h2 {
-  font-size: 1.6rem;
-  margin-bottom: 15px;
-  text-align: center;
-  color: #f0f0f0;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-}
-
-/* Социалдык иконалардын кнопкалары */
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 10px;
+.hero-section2 h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 
-/* ..лдоываоды */
-.top-students-section {
-  margin-top: 50px;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
 
-.top-students-section h2 {
-  text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  color: #fff;
-  text-shadow: 0 0 10px rgba(0,0,0,0.8);
-}
 
-.top-students-list {
-  list-style: none;
-  padding-left: 0;
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: justify;
   line-height: 1.8;
-  color: #ddd;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
-.top-students-list li {
-  margin-bottom: 10px;
-  text-shadow: 0 0 5px rgba(0,0,0,0.6);
-}
-
-
-.top-students-list li {
-  margin-bottom: 20px;
-  padding: 10px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.04);
-  line-height: 1.6;
-}
-
-.top-students-list a {
-  display: inline-block;
-  margin-top: 6px;
-  color: #4eaaff;
+.content h3 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-align: center;
   font-weight: bold;
-  text-decoration: underline;
 }
 
-.top-students-list a:hover {
-  color: #aaccff;
+.content ul {
+  padding-left: 0;
+  list-style: none;
 }
 
+.content li {
+  margin-bottom: 20px;
+}
+
+.content li strong {
+  color: #ffb347; /* Сары-апельсин түстүү */
+  font-weight: 700;
+  display: inline;
+}
+
+
+/* .conclusion {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 2.1rem;
+  color: #333;
+} */
+
+
+
+/* БАЙЛАНЫШ БАРАКЧАСЫ БАЙЛАНЫШ БАРАКЧАСЫ */
+.contact-page {
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
+  background-color: #111;
+}
+
+.contact-hero {
+  background-image: url("https://storage-prtl-co.imgix.net/endor/articles/2555/images/1520004349_shutterstock_621830837.jpg?w=660&h=440&q=40"); /* сүрөттүн туура жолун кой */
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.contact-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+.contact-hero p {
+  font-size: 1.5rem;
+  color: #ccc;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px 10%;
+  background-color: #1a1a1a;
+  justify-content: center;
+}
+
+.contact-info {
+  flex: 1 1 350px;
+  font-size: 18px;
+  line-height: 2;
+  background-color: #222;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.contact-form {
+  flex: 1 1 450px;
+  background-color: #222;
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #333;
+  color: #fff;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #bbb;
+}
+
+.contact-form button {
+  padding: 14px;
+  background-color: #e63946;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #d62828;
+}

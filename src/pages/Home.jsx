@@ -166,62 +166,7 @@ const Home = () => {
         )}
       </div>
 
-      <footer className="footer">
-        <p>© 2025 Kyzmat Sayakat. Все права защищены.</p>
-        <p>
-          Электронная почта:{" "}
-          <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=kushbakovkutman@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            kushbakovkutman@gmail.com
-          </a>
-        </p>
-
-        <div className="footer-icons">
-          <a
-            href="https://instagram.com/umra.kyzmatsayakat"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="footer-icon"
-          >
-            <FaInstagram size={20} />
-          </a>
-          <a
-            href="https://facebook.com/kyzmatsayakatbish"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="footer-icon"
-          >
-            <FaFacebookF size={20} />
-          </a>
-          <a
-            href="https://kyzmatsayakat.kg"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="footer-icon"
-          >
-            <FaGlobe size={20} />
-          </a>
-          <a
-            href="https://youtube.com/@umra.kyzmatsayakat"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="footer-icon"
-          >
-            <FaYoutube size={20} />
-          </a>
-          <a
-            href="https://wa.me/996505400900"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="footer-icon"
-          >
-            <FaWhatsapp size={20} />
-          </a>
-        </div>
-      </footer>
+     
     </section>
   );
 };

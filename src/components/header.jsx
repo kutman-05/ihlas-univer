@@ -41,16 +41,14 @@ const Header = () => {
     <header className="header">
       <nav className="nav" ref={dropdownRef}>
         <div className="logo">
-          <Link to="/">ИХЛАС</Link>
+          <Link to="/">Global Consult</Link>
         </div>
         <ul className="nav-links">
           <li>
             <button
               className="dropdown-btn"
               onClick={() => toggleDropdown("services")}
-            >
-              {t("our_services")} <SlArrowDown />
-            </button>
+            ></button>
             {activeDropdown === "services" && (
               <ul className="dropdown-menu">
                 <li>
@@ -84,9 +82,7 @@ const Header = () => {
                   <Link to="/about">📖 {t("Биздин тарыхыбыз")}</Link>
                 </li>
                 <li>
-                  <Link to="/about/team">
-                    👩‍🏫 {t("Окутуучулар жана команда")}
-                  </Link>
+                  <Link to="/team">👩‍🏫 {t("Суроолор")}</Link>
                 </li>
                 <li>
                   <Link to="/about/partners">
@@ -114,16 +110,21 @@ const Header = () => {
                 <li>
                   <Link to="/student">{t("Студенттер")}</Link>
                 </li>
+                <li>
+                  <Link to="/university1">{t("Университетке даярдоо")}</Link>
+                </li>
               </ul>
             )}
+          </li>
+          <li>
+            <Link to="/contact">
+              <TranslatedText id="contact" />
+            </Link>
           </li>
           <li
             className="contact-lang-wrapper"
             style={{ display: "flex", alignItems: "center", gap: "10px" }}
           >
-            <Link to="/contact">
-              <TranslatedText id="contact" />
-            </Link>
             <div className="lang-switcher">
               <select value={lang} onChange={(e) => setLang(e.target.value)}>
                 <option value="ky">Кыргызча</option>

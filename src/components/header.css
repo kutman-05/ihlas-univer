@@ -1,10 +1,13 @@
 .header {
-  background-color: #0d0d0d78;
+ background: linear-gradient(to bottom, #0d0d0d, #074775);
   padding: 0.8rem 2rem;
   position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.036);
+  height: 4pc;
+  display: flex;
+  align-items: center;
 }
 
 .nav {
@@ -20,15 +23,17 @@
   font-size: 1.8rem;
   font-weight: 700;
   text-decoration: none;
+margin-left: -4pc;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.8rem;
+  gap: 2.4rem;
   align-items: center;
   margin: 0;
   padding: 0;
+  margin-left: 29pc;
 }
 
 .nav-links li {
