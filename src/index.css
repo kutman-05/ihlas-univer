@@ -894,3 +894,110 @@ strong {
 .contact-form button:hover {
   background-color: #d62828;
 }
+
+/* АЛПТАЦИЯ АДАПТАЦИЯ АДАПТАЦИЯ */
+/* Адаптивдүүлүк: телефондор жана кичи экрандар үчүн */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-left, .footer-right {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .footer-right p {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-section2 h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section2 h2 {
+    font-size: 1.2rem;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    padding: 30px 5%;
+  }
+
+  .university-list {
+    grid-template-columns: 1fr;
+  }
+
+  .why-us-section h2 {
+    font-size: 22px;
+  }
+
+  .why-us-card h3 {
+    font-size: 16px;
+  }
+
+  .why-us-card p {
+    font-size: 13px;
+  }
+
+  .footer-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  .top-students-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .student-contact h2 {
+    font-size: 1.5rem;
+  }
+
+  .student-contact p {
+    font-size: 1rem;
+  }
+
+  .content {
+    font-size: 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}
+
+/* Орто өлчөмдөгү экрандар үчүн (планшет, кичине ноутбуктар) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .footer-left, .footer-right {
+    margin-left: 4pc;
+  }
+
+  .hero-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-section2 h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section2 h2 {
+    font-size: 1.3rem;
+  }
+
+  .content {
+    font-size: 1.05rem;
+  }
+
+  .top-students-section h2,
+  .student-contact h2 {
+    font-size: 1.8rem;
+  }
+}
