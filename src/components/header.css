@@ -1,10 +1,10 @@
 .header {
-  background: linear-gradient(to bottom, #0d0d0d, #074775);
+  background: linear-gradient(to bottom, #0d0d0d89, #0747758f);
   padding: 0.8rem 2rem;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.036);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
   height: 4pc;
   display: flex;
   align-items: center;
@@ -69,7 +69,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
   padding: 0.5rem 0;
   z-index: 2000;
-  display: none;
+  display: block;
 }
 
 .dropdown-menu li {
@@ -120,14 +120,17 @@
   .dropdown-btn {
     width: 100%;
     justify-content: flex-start;
+    display: block;
   }
 
   .dropdown-menu {
     position: static;
-    box-shadow: none;
+    box-shadow: blue;
     border-radius: 0;
-    padding: 0;
-    display: none;
+    background: #081f50;
+    display: block;
+    width: 19pc;
+    margin-left: 3pc;
   }
 
   .dropdown-menu li a {
@@ -142,5 +145,11 @@
   /* Опционально: открытие dropdown при нажатии (JS керек) */
   .dropdown.open .dropdown-menu {
     display: block;
+  }
+  .lang-switcher{
+    margin-left: 9pc;
+  }
+  .bailanysh{
+    margin-left: 9pc;
   }
 }

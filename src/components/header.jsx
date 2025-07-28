@@ -117,9 +117,11 @@ const Header = () => {
             )}
           </li>
           <li>
-            <Link to="/contact">
-              <TranslatedText id="contact" />
-            </Link>
+            <div className="bailanysh">
+              <Link to="/contact">
+                <TranslatedText id="contact" />
+              </Link>
+            </div>
           </li>
           <li
             className="contact-lang-wrapper"
