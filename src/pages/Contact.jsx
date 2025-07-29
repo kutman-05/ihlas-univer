@@ -23,7 +23,7 @@ const Contact = () => {
       return;
     }
 
-    const fullMessage = `Саламатсызбы!👇\n\n👤 Аты: ${name}\n📧 Email: ${email}\n📞 Телефон: ${phone}\n📝 Тема: ${subject}\n💬 Билдирүү: ${message}`;
+    const fullMessage = `Саламатсызбы? ${name}  ${email}  ${phone} ${subject}  ${message}`;
 
     const encodedMessage = encodeURIComponent(fullMessage);
     const whatsappLink = `https://wa.me/996709051636?text=${encodedMessage}`;

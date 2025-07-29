@@ -39,7 +39,7 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.612);
+    background: rgba(0, 0, 0, 0.375);
     z-index: 0;
   }
 
@@ -1002,5 +1002,133 @@ strong {
   .top-students-section h2,
   .student-contact h2 {
     font-size: 1.8rem;
+  }
+}
+
+
+/* КӨП БЕРИЛУУЧУ СУРООЛОР БАРАКЧАСЫ */
+.faq-page {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d1117; /* Dark background */
+  color: #f1f1f1;
+}
+
+.faq-hero {
+  background-image: url('https://www.studyportalturkey.com/wp-content/uploads/2022/08/thumbs_b_c_3658a8f90903e735caba95c8e77f381d.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 45vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem 3rem;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.faq-overlay h1 {
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.faq-overlay p {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+}
+
+.faq-container {
+  background-color: #161b22;
+  padding: 3rem 2rem;
+  color: #c9d1d9;
+  max-width: 900px;
+  margin: -3rem auto 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.faq-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #58a6ff;
+}
+
+.faq-item {
+  margin-bottom: 1.8rem;
+  background: #21262d;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(88, 166, 255, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.faq-item:hover {
+  transform: scale(1.01);
+}
+
+.faq-item h3 {
+  color: #58a6ff;
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.faq-item p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #ffffff;
+}
+/* Адаптациясы */
+@media (max-width: 768px) {
+  .faq-hero {
+    height: 30vh;
+    padding: 1rem;
+  }
+
+  .faq-overlay {
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+  }
+
+  .faq-overlay h1 {
+    font-size: 1.8rem;
+  }
+
+  .faq-overlay p {
+    font-size: 1rem;
+  }
+
+  .faq-container {
+    padding: 2rem 1rem;
+    margin: -2rem 1rem 1rem;
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .faq-container h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .faq-item {
+    padding: 1rem;
+    margin-bottom: 1.2rem;
+    border-radius: 8px;
+  }
+
+  .faq-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .faq-item p {
+    font-size: 0.95rem;
+    line-height: 1.4;
   }
 }
