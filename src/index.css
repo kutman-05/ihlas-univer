@@ -1164,3 +1164,37 @@ strong {
   pointer-events: none;
 }
 
+@media (max-width: 768px) {
+  .image-gallery-wrapper {
+    padding: 0 0.5rem;
+  }
+
+  .image-gallery {
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
+
+  .image-gallery blockquote.instagram-media {
+    width: 250px;
+    min-width: 250px;
+    height: 350px;
+  }
+
+  .slider-btn {
+    font-size: 1.5rem;
+    padding: 0.3rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-gallery blockquote.instagram-media {
+    width: 200px;
+    min-width: 200px;
+    height: 320px;
+  }
+
+  .slider-btn {
+    font-size: 1.2rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
