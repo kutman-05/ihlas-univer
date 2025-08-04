@@ -15,6 +15,8 @@ const Home = () => {
   const [atEnd, setAtEnd] = useState(false);
   const [hideArrows, setHideArrows] = useState(false);
   const { lang } = useLanguage();
+  const embedRefs = useRef([]);
+  const [activeIndex, setActiveIndex] = useState(null);
 
   const checkScrollButtons = () => {
     const gallery = galleryRef.current;
@@ -38,6 +40,22 @@ const Home = () => {
     }
   };
 
+  const loadInstagramEmbedScript = () => {
+    if (!window.instgrm) {
+      const script = document.createElement("script");
+      script.src = "https://www.instagram.com/embed.js";
+      script.async = true;
+      script.onload = () => {
+        if (window.instgrm) {
+          window.instgrm.Embeds.process();
+        }
+      };
+      document.body.appendChild(script);
+    } else {
+      window.instgrm.Embeds.process();
+    }
+  };
+
   useEffect(() => {
     const gallery = galleryRef.current;
     if (!gallery) return;
@@ -46,11 +64,28 @@ const Home = () => {
     gallery.addEventListener("scroll", checkScrollButtons);
     window.addEventListener("resize", checkScrollButtons);
 
+    loadInstagramEmbedScript();
+
     return () => {
       gallery.removeEventListener("scroll", checkScrollButtons);
       window.removeEventListener("resize", checkScrollButtons);
     };
   }, []);
+
+  const handleEmbedClick = (clickedIndex) => {
+    if (activeIndex === clickedIndex) return;
+
+    embedRefs.current.forEach((ref, i) => {
+      if (ref && i !== clickedIndex) {
+        const iframe = ref.querySelector("iframe");
+        if (iframe) {
+          const src = iframe.src;
+          iframe.src = src;
+        }
+      }
+    });
+    setActiveIndex(clickedIndex);
+  };
 
   return (
     <section className="main-page">
@@ -132,29 +167,37 @@ const Home = () => {
             ◀
           </button>
         )}
-        <div className="image-gallery" ref={galleryRef}>
+
+        <div
+          className="image-gallery"
+          ref={galleryRef}
+          style={{
+            display: "flex",
+            gap: "1rem",
+            overflowX: "auto",
+            padding: "1rem 0",
+          }}
+        >
           {[
-            "8tddEMkVNzI",
-            "Bn_Ulk7MOzk",
-            "8tce5TqnDgU",
-            "TwQUdbw4__4",
-            "8tddEMkVNzI",
-            "Bn_Ulk7MOzk",
-            "8tce5TqnDgU",
-            "TwQUdbw4__4",
-          ].map((id) => (
-            <iframe
-              key={id}
-              width="300"
-              height="200"
-              src={`https://www.youtube.com/embed/${id}`}
-              title="YouTube video"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+            "https://www.instagram.com/reel/DKu-VYhtthw/",
+            "https://www.instagram.com/reel/DKO7yi0o8h3/",
+            "https://www.instagram.com/reel/DKOb4P8I5DL/",
+            "https://www.instagram.com/reel/DKu-VYhtthw/",
+            "https://www.instagram.com/reel/DKO7yi0o8h3/",
+            "https://www.instagram.com/reel/DKOb4P8I5DL/",
+          ].map((url, index) => (
+            <blockquote
+              key={index}
+              className="instagram-media"
+              data-instgrm-permalink={url}
+              data-instgrm-version="14"
+              style={{ width: 300, minWidth: 300, height: 400, margin: 0 }}
+              ref={(el) => (embedRefs.current[index] = el)}
+              onClick={() => handleEmbedClick(index)}
+            ></blockquote>
           ))}
         </div>
+
         {!hideArrows && (
           <button
             className={`slider-btn right ${atEnd ? "disabled" : ""}`}
@@ -165,8 +208,6 @@ const Home = () => {
           </button>
         )}
       </div>
-
-     
     </section>
   );
 };

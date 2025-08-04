@@ -74,7 +74,7 @@ const Header = () => {
               className="dropdown-btn"
               onClick={() => toggleDropdown("about")}
             >
-              {t("Биз жөнүндө")} <SlArrowDown />
+              <TranslatedText id="we_true" /> <SlArrowDown />
             </button>
             {activeDropdown === "about" && (
               <ul className="dropdown-menu">

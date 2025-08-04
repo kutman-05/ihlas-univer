@@ -17,13 +17,11 @@ const Footer = () => {
       </h1>
 
       <div className="footer-content">
-       
         <div className="footer-left"></div>
 
-       
         <div className="footer-icons">
           <a
-            href="https://instagram.com/umra.kyzmatsayakat"
+            href="https://instagram.com/edu_glob"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-icon"
@@ -55,7 +53,7 @@ const Footer = () => {
             <FaYoutube size={20} />
           </a>
           <a
-            href="https://wa.me/996505400900"
+            href="https://wa.me/996225200300"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-icon"
@@ -64,7 +62,6 @@ const Footer = () => {
           </a>
         </div>
 
-      
         <div className="footer-right">
           <p>Суроолор болсо, кайрылыңыз 👇</p>
           <form
