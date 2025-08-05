@@ -77,7 +77,7 @@ const Footer = () => {
 
               const message = `Саламатсызбы! Мен Туркия окуу боюнча толук маалымат алайын дедим эле.`;
               const encodedMessage = encodeURIComponent(message);
-              const whatsappLink = `https://wa.me/996225200300?text=${encodedMessage}`;
+              const whatsappLink = `https://wa.me/996771000898?text=${encodedMessage}`;
               window.open(whatsappLink, "_blank");
 
               e.target.reset();
