@@ -169,8 +169,7 @@ const Home = () => {
         )}
 
         <div
-          className="image-gallery"
-          ref={galleryRef}
+          className="video-gallery"
           style={{
             display: "flex",
             gap: "1rem",
@@ -179,22 +178,23 @@ const Home = () => {
           }}
         >
           {[
-            "https://www.instagram.com/reel/DKu-VYhtthw/",
-            "https://www.instagram.com/reel/DKO7yi0o8h3/",
-            "https://www.instagram.com/reel/DKOb4P8I5DL/",
-            "https://www.instagram.com/reel/DKu-VYhtthw/",
-            "https://www.instagram.com/reel/DKO7yi0o8h3/",
-            "https://www.instagram.com/reel/DKOb4P8I5DL/",
-          ].map((url, index) => (
-            <blockquote
+            "/videos/video_2025-08-06_02-22-31.mp4",
+            "/videos/video_2025-08-06_02-22-31.mp4",
+            "/videos/video_2025-08-06_02-22-31.mp4",
+            "/videos/video_2025-08-06_02-22-31.mp4",
+            "/videos/video_2025-08-06_02-22-31.mp4",
+            "/videos/video_2025-08-06_02-22-31.mp4",
+            "/videos/video_2025-08-06_02-22-31.mp4",
+            "/videos/video_2025-08-06_02-22-31.mp4",
+          ].map((src, index) => (
+            <video
               key={index}
-              className="instagram-media"
-              data-instgrm-permalink={url}
-              data-instgrm-version="14"
-              style={{ width: 300, minWidth: 300, height: 400, margin: 0 }}
-              ref={(el) => (embedRefs.current[index] = el)}
-              onClick={() => handleEmbedClick(index)}
-            ></blockquote>
+              src={src}
+              width={300}
+              height={400}
+              controls
+              style={{ minWidth: 300, borderRadius: "10px" }}
+            />
           ))}
         </div>
 

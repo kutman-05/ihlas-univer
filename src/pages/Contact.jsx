@@ -19,17 +19,29 @@ const Contact = () => {
     const { name, email, subject, phone, message } = formData;
 
     if (!name || !email || !subject || !message) {
-      alert("Сураныч, бардык талааларды толтуруңуз.");
+      alert("Сураныч, бардык талап кылынган талааларды толтуруңуз.");
       return;
     }
 
-    const fullMessage = `Саламатсызбы? ${name}  ${email}  ${phone} ${subject}  ${message}`;
+    // ✅ Толук жана таза текст (жөнөкөй WhatsApp ичинде чыккандай)
+    const fullMessage = `
+Саламатсызбы!
+Аты-жөнүм: ${name}
+Email: ${email}
+Телефон: ${phone || "Көрсөтүлгөн эмес"}
+Тема: ${subject}
+Билдирүү: ${message}
+    `.trim();
 
     const encodedMessage = encodeURIComponent(fullMessage);
-    const whatsappLink = `https://wa.me/996709051636?text=${encodedMessage}`;
+
+    
+    const targetPhoneNumber = "996225200300"; // ← Бул жерден башка номерге өзгөртсө болот
+
+    const whatsappLink = `https://wa.me/${targetPhoneNumber}?text=${encodedMessage}`;
     window.open(whatsappLink, "_blank");
 
-    // Форманы тазалоо
+    // ✅ Форманы тазалоо
     setFormData({
       name: "",
       email: "",
@@ -50,12 +62,11 @@ const Contact = () => {
         <div className="contact-info">
           <h2>📌 Маалымат</h2>
           <p>
-            📍 Аталар кварталы, шейит Айхан Арслан көчөсү №10Б/1, Картал,
-            Стамбул
+            📍 Бишкек шаары. Ахунбаева 141 көчөсү
           </p>
-          <p>📧 Email: infothinkturkiye@gmail.com</p>
-          <p>📞 Телефон: +996 505 400 900</p>
-          <p>📱 WhatsApp: +996 505 400 900</p>
+          <p>📧 Email: globalconsult@gmail.com</p>
+          <p>📞 Телефон: +996 771 000 898</p>
+          <p>📱 WhatsApp: +996 225 200 300</p>
         </div>
 
         <form className="contact-form" onSubmit={handleSubmit}>
@@ -107,3 +118,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
+

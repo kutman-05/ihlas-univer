@@ -77,7 +77,7 @@ const Footer = () => {
 
               const message = `Саламатсызбы! Мен Туркия окуу боюнча толук маалымат алайын дедим эле.`;
               const encodedMessage = encodeURIComponent(message);
-              const whatsappLink = `https://wa.me/996709051636?text=${encodedMessage}`;
+              const whatsappLink = `https://wa.me/996225200300?text=${encodedMessage}`;
               window.open(whatsappLink, "_blank");
 
               e.target.reset();
@@ -109,11 +109,11 @@ const Footer = () => {
         <p>
           Электронная почта:{" "}
           <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=kushbakovkutman@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=globalconsult@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            kushbakovkutman@gmail.com
+            globalconsult@gmail.com
           </a>
         </p>
         <p>
