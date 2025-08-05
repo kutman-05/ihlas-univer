@@ -178,14 +178,12 @@ const Home = () => {
           }}
         >
           {[
-            "/videos/video_2025-08-06_02-22-31.mp4",
-            "/videos/video_2025-08-06_02-22-31.mp4",
-            "/videos/video_2025-08-06_02-22-31.mp4",
-            "/videos/video_2025-08-06_02-22-31.mp4",
-            "/videos/video_2025-08-06_02-22-31.mp4",
-            "/videos/video_2025-08-06_02-22-31.mp4",
-            "/videos/video_2025-08-06_02-22-31.mp4",
-            "/videos/video_2025-08-06_02-22-31.mp4",
+            "/videos/Видео WhatsApp 2025-08-06 в 03.12.32_5bafca1e.mp4",
+            "/videos/Видео WhatsApp 2025-08-06 в 03.12.16_ba93c885.mp4",
+            "/videos/Видео WhatsApp 2025-08-06 в 03.12.33_914cd10a.mp4",
+            "/videos/Видео WhatsApp 2025-08-06 в 03.12.32_5bafca1e.mp4",
+            "/videos/Видео WhatsApp 2025-08-06 в 03.12.16_ba93c885.mp4",
+            "/videos/Видео WhatsApp 2025-08-06 в 03.12.33_914cd10a.mp4",
           ].map((src, index) => (
             <video
               key={index}

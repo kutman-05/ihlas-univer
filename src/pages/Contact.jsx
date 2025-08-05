@@ -36,7 +36,7 @@ Email: ${email}
     const encodedMessage = encodeURIComponent(fullMessage);
 
     
-    const targetPhoneNumber = "996225200300"; // ← Бул жерден башка номерге өзгөртсө болот
+    const targetPhoneNumber = "996771000898"; // ← Бул жерден башка номерге өзгөртсө болот
 
     const whatsappLink = `https://wa.me/${targetPhoneNumber}?text=${encodedMessage}`;
     window.open(whatsappLink, "_blank");
