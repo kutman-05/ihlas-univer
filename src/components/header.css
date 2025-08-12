@@ -18,7 +18,10 @@
   align-items: center;
   justify-content: space-between;
 }
-
+.logo{
+  display: flex;
+  align-items: center;
+}
 .logo a {
   color: #eee;
   font-size: 1.8rem;
@@ -26,6 +29,28 @@
   text-decoration: none;
   margin-left: 0;
 }
+.logo img {
+  height: 4pc; /* кичине экранда автомат азаят */
+  width: 5pc; /* туурасынан туурасы */
+  object-fit: contain; /* сүрөт формасын бузбай */
+  margin-left: 8px; /* текст менен аралык */
+  vertical-align: middle; /* текст менен бир сызыкта */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* жылма эффект */
+}
+
+.logo img:hover {
+  transform: scale(1.05); /* үстүнө барганда бир аз чоңойот */
+  opacity: 0.9;
+}
+
+/* кичине экрандар үчүн */
+@media (max-width: 600px) {
+  .logo img {
+    height: 32px;
+    margin-left: 5px;
+  }
+}
+
 
 .nav-links {
   list-style: none;

@@ -170,6 +170,7 @@ const Home = () => {
 
         <div
           className="video-gallery"
+          ref={galleryRef} // Мына ушуну коштук
           style={{
             display: "flex",
             gap: "1rem",

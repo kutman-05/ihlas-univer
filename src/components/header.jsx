@@ -6,7 +6,7 @@ import "./header.css";
 import { useLanguage } from "../context/LanguageContext";
 import translations from "../utils/translations.json";
 import TranslatedText from "./TranslatedText";
-
+import logo from "../images/Логотип.png";
 const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const dropdownRef = useRef(null);
@@ -41,6 +41,7 @@ const Header = () => {
     <header className="header">
       <nav className="nav" ref={dropdownRef}>
         <div className="logo">
+          <img src={logo} alt="Logo" />
           <Link to="/">Global Consult</Link>
         </div>
         <ul className="nav-links">

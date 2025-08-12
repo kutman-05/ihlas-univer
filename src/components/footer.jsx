@@ -21,7 +21,7 @@ const Footer = () => {
 
         <div className="footer-icons">
           <a
-            href="https://instagram.com/edu_glob"
+            href="https://instagram.com/glob_consult"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-icon"
@@ -75,9 +75,9 @@ const Footer = () => {
                 return;
               }
 
-              const message = `Саламатсызбы! Мен Туркия окуу боюнча толук маалымат алайын дедим эле.`;
+              const message = `Саламатсызбы! Мен Туркия окуу боюнча толук маалымат алайын дедим. Менин атым: ${name}, Байланыш номерим: ${phone}`;
               const encodedMessage = encodeURIComponent(message);
-              const whatsappLink = `https://wa.me/996771000898?text=${encodedMessage}`;
+              const whatsappLink = `https://wa.me/996225200300?text=${encodedMessage}`;
               window.open(whatsappLink, "_blank");
 
               e.target.reset();
@@ -85,7 +85,7 @@ const Footer = () => {
           >
             <input
               type="text"
-              name="name"
+              name="name" 
               placeholder="Атыңыз"
               className="footer-input"
               required
@@ -109,11 +109,11 @@ const Footer = () => {
         <p>
           Электронная почта:{" "}
           <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=globalconsult@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=globalconsult.kgz@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            globalconsult@gmail.com
+            globalconsult.kgz@gmail.com
           </a>
         </p>
         <p>
