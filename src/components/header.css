@@ -45,12 +45,61 @@
 }
 
 /* кичине экрандар үчүн */
-@media (max-width: 600px) {
+/* 1024px чейин */
+@media (max-width: 1024px) {
   .logo img {
-    height: 32px;
-    margin-left: 5px;
+    height: 3.8pc;
+    width: 3.8pc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
+
+/* 768px чейин (планшет) */
+@media (max-width: 768px) {
+  .logo img {
+    height: 3.2pc;
+    width: 3.6pc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* 425px чейин (чоң телефон) */
+@media (max-width: 425px) {
+  .logo img {
+    height: 3.2pc;
+    width: 3.2pc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* 375px чейин (орто телефон) */
+@media (max-width: 375px) {
+  .logo img {
+    height: 3pc;
+    width: 3pc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* 320px чейин (кичинекей телефон) */
+@media (max-width: 320px) {
+  .logo img {
+    height: 2.8pc;
+    width: 2.8pc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 
 
 .nav-links {
@@ -135,12 +184,12 @@
     flex-direction: column;
     gap: 0.8rem;
     width: 100%;
-    margin-left: 0;
+    
   }
 
-  .nav-links li {
-    width: 100%;
-  }
+  /* .nav-links li {
+    width: 50%;
+  } */
 
   .nav-links a,
   .dropdown-btn {
@@ -177,5 +226,30 @@
   }
   .bailanysh{
     margin-left: 9pc;
+  }
+}
+@media (max-width: 1024px) {
+  .nav-links li {
+    width: 55%;
+  }
+}
+/* 425px чейин (чоң телефон) */
+@media (max-width: 450px) {
+  .nav-links li {
+    width: 102%;
+  }
+}
+
+/* 375px чейин (орто телефон) */
+@media (max-width: 385px) {
+  .nav-links li {
+    width: 116%;
+  }
+}
+
+/* 320px чейин (кичинекей телефон) */
+@media (max-width: 330px) {
+  .nav-links li {
+    width: 140%;
   }
 }

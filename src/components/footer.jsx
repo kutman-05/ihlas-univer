@@ -29,7 +29,7 @@ const Footer = () => {
             <FaInstagram size={20} />
           </a>
           <a
-            href="https://facebook.com/kyzmatsayakatbish"
+            href="https://www.facebook.com/share/1EAxcpGkX3/"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-icon"
@@ -37,7 +37,7 @@ const Footer = () => {
             <FaFacebookF size={20} />
           </a>
           <a
-            href="https://kyzmatsayakat.kg"
+            href="https://ihlas-univer-54up.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-icon"
@@ -85,7 +85,7 @@ const Footer = () => {
           >
             <input
               type="text"
-              name="name" 
+              name="name"
               placeholder="Атыңыз"
               className="footer-input"
               required
